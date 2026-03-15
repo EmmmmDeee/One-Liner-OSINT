@@ -1,0 +1,130 @@
+# Example configuration file for One-Liner OSINT
+
+# General settings
+verbose: false
+output: text
+workers: 10
+timeout: 30
+no_color: false
+user_agent: "OSINT-Tool/1.0 (https://github.com/EmmmmDeee/One-Liner-OSINT)"
+
+# API Keys - Replace with your actual API keys
+api_keys:
+  # Have I Been Pwned API key for breach checking
+  # Get your key at: https://haveibeenpwned.com/API/Key
+  haveibeenpwned: ""
+
+  # Hunter.io API key for email verification
+  # Get your key at: https://hunter.io/api
+  hunter_io: ""
+
+  # Shodan API key for infrastructure scanning
+  # Get your key at: https://account.shodan.io/
+  shodan: ""
+
+  # VirusTotal API key for file/URL scanning
+  # Get your key at: https://www.virustotal.com/gui/join-us
+  virustotal: ""
+
+  # Google Custom Search Engine API key and CX ID
+  # Get your credentials at: https://developers.google.com/custom-search
+  google_cse: ""
+  google_cse_cx: ""
+
+  # Bing Search API key
+  # Get your key at: https://www.microsoft.com/en-us/bing/apis/bing-web-search-api
+  bing_search: ""
+
+  # EmailRep.io API key
+  # Get your key at: https://emailrep.io/
+  emailrep_io: ""
+
+  # IPData API key for IP geolocation
+  # Get your key at: https://ipdata.co/
+  ipdata: ""
+
+  # IPGeolocation API key
+  # Get your key at: https://ipgeolocation.io/
+  ipgeolocation: ""
+
+  # WhoisXMLAPI key for WHOIS lookups
+  # Get your key at: https://whoisxmlapi.com/
+  whoisxmlapi: ""
+
+  # GitHub personal access token
+  # Create at: https://github.com/settings/tokens
+  github: ""
+
+  # Social media API keys (optional)
+  twitter: ""
+  facebook: ""
+  instagram: ""
+  linkedin: ""
+
+# Rate limiting configuration
+rate_limit:
+  # Maximum requests per second
+  requests_per_second: 10
+
+  # Burst size for rate limiter
+  burst_size: 20
+
+  # Number of retry attempts on failure
+  retry_attempts: 3
+
+  # Delay between retries (seconds)
+  retry_delay: 2
+
+# Search configuration
+search:
+  # Maximum results to return
+  max_results: 100
+
+  # Maximum depth for recursive searches
+  max_depth: 3
+
+  # Follow HTTP redirects
+  follow_redirects: true
+
+  # User agents to rotate
+  user_agents:
+    - "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+    - "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+    - "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+
+  # Proxy configuration
+  use_proxy: false
+  proxy_list: []
+
+  # DNS servers to use
+  dns_servers:
+    - "8.8.8.8"
+    - "1.1.1.1"
+
+# Output configuration
+output:
+  # Output format: text, json, csv, table
+  format: text
+
+  # Pretty print JSON
+  pretty: true
+
+  # Include empty fields in output
+  include_empty: false
+
+  # Include timestamp in output
+  timestamp: true
+
+  # Save results to file
+  save_to_file: false
+
+  # Output directory for saved files
+  output_dir: ./output
+
+# Cache configuration
+cache:
+  # Cache directory
+  dir: .osint_cache
+
+  # Cache TTL in seconds (default: 3600 = 1 hour)
+  ttl: 3600
